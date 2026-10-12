@@ -6,11 +6,11 @@ Este repositório documenta a avaliação prática e o processo de adaptação d
 
 ## 1. Acesso e Estrutura Não-Instanciada (Nó Raiz)
 
-Acedeu-se à instância local do EMEN2 a correr no ambiente Docker na porta `8080`. O sistema disponibiliza o nó de registo inicial `Record #0` (Root).
+Acedeu-se à instância local do EMEN2 a correr no ambiente Docker na porta `8080`. O sistema disponibiliza o nó de registo inicial `Record #0` (Root), a partir do qual toda a estrutura ontológica de ativos é construída hierarquicamente.
 
 | Tela de Login | Nó Raiz Inicial (`/record/0/`) |
 | :---: | :---: |
-| ![Login Inicial](imagens/Login_senha.png) | ![Root Record](imagens/root.png) |
+| ![Login Inicial](Login_senha.png) | ![Root Record](root.png) |
 
 ---
 
@@ -18,7 +18,7 @@ Acedeu-se à instância local do EMEN2 a correr no ambiente Docker na porta `808
 
 Inspecionou-se a ontologia de parâmetros nativos do sistema (`/paramdefs/`) e procedeu-se à criação dos atributos específicos de ativos de rede.
 
-![Ontologia de Parâmetros](imagens/Parameter%20ontology.png)
+![Ontologia de Parâmetros](Parameter%20ontology.png)
 
 ### Cadastro dos Parâmetros de Camada 2 e 3
 
@@ -28,7 +28,7 @@ Inspecionou-se a ontologia de parâmetros nativos do sistema (`/paramdefs/`) e p
 
 | Formulário de Criação | Parâmetro Persistido |
 | :---: | :---: |
-| ![Novo IP](imagens/new%20parameter.png) | ![IP Salvo](imagens/Parameter_IP%20Address.png) |
+| ![Novo IP](new%20parameter.png) | ![IP Salvo](Parameter_IP%20Address.png) |
 
 2. **MAC Address (`mac_address`):**
    * Definição como tipo `string`.
@@ -36,7 +36,7 @@ Inspecionou-se a ontologia de parâmetros nativos do sistema (`/paramdefs/`) e p
 
 | Formulário de Criação | Parâmetro Persistido |
 | :---: | :---: |
-| ![Novo MAC](imagens/mac_address.png) | ![MAC Salvo](imagens/MAC%20Address.png) |
+| ![Novo MAC](mac_address.png) | ![MAC Salvo](MAC%20Address.png) |
 
 3. **Bandwidth (`bandwidth_mbps`):**
    * Definição como tipo `float` para medição de largura de banda em Mbps.
@@ -44,7 +44,7 @@ Inspecionou-se a ontologia de parâmetros nativos do sistema (`/paramdefs/`) e p
 
 | Formulário de Criação | Parâmetro Persistido |
 | :---: | :---: |
-| ![Novo Bandwidth](imagens/bandwidth_mbps.png) | ![Bandwidth Salvo](imagens/Bandwidth.png) |
+| ![Novo Bandwidth](bandwidth_mbps.png) | ![Bandwidth Salvo](Bandwidth.png) |
 
 ---
 
@@ -58,7 +58,7 @@ A interface gráfica nativa ocultava a caixa de edição direta do template prin
 
 | View Inicial Limita GUI | Template Injetado na View |
 | :---: | :---: |
-| ![Protocolo Inicial](imagens/Protocol_%20Network%20Device.png) | ![Simulação de View](imagens/simula%C3%A7%C3%A3o.png) |
+| ![Protocolo Inicial](Protocol_%20Network%20Device.png) | ![Simulação de View](simula%C3%A7%C3%A3o.png) |
 
 Para contornar a limitação e associar os 7 parâmetros (`ip_address`, `mac_address`, `vlan_id`, `bandwidth_mbps`, `firmware_version`, `routing_protocol` e `vendor`), executou-se a injeção via script Python no contêiner:
 
@@ -87,15 +87,27 @@ print('RecordDef network_device atualizado com sucesso!')
 
 ## 4. Hierarquia de Ativos: Criação do Modelo `SW-CORE-01`
 
-Para simular um ambiente CMDB real, derivou-se um tipo de registo específico para switches de núcleo (**`SW-CORE-01`**) a partir de `network_device`.
+Para simular um ambiente CMDB real de infraestrutura de rede, derivou-se um tipo de registo específico para switches de núcleo de camada 3 (**`SW-CORE-01`**) a partir da definição base `network_device`.
+
+### Parâmetros e Atributos Mapeados:
+* **IP Address (`ip_address`):** Endereço IPv4 de gestão do dispositivo.
+* **MAC Address (`mac_address`):** Endereço físico da interface principal.
+* **VLAN ID (`vlan_id`):** Identificador da VLAN de gerência.
+* **Bandwidth (`bandwidth_mbps`):** Capacidade de comutação / largura de banda em Mbps.
+* **Firmware Version (`firmware_version`):** Versão do sistema operacional instalado no switch.
+* **Routing Protocol (`routing_protocol`):** Protocolo de roteamento ativo (ex.: OSPF, BGP).
+* **Vendor (`vendor`):** Fabricante do equipamento de rede.
 
 | Formulário de Definição | Protocolo `SW-CORE-01` Salvo |
 | :---: | :---: |
-| ![Criando SW-CORE-01](imagens/switch.png) | ![SW-CORE-01 Salvo](imagens/switch_salvo.png) |
+| ![Criando SW-CORE-01](switch.png) | ![SW-CORE-01 Salvo](switch_salvo.png) |
 
 ---
 
 ## 5. Conclusão da Análise para a RSL
 
-* **Capacidade de Adaptação (Extensibilidade):** **Alta.** O motor de dados do EMEN2 (Berkeley DB) permitiu criar tipos de dados complexos para redes sem alterar o código-fonte base.
-* **Usabilidade / Developer Experience (DX):** **Média/Baixa.** A interface gráfica nativa exige procedimentos alternativos (*workarounds*) via linha de comando/Python para edição avançada de layouts de *views*.
+A avaliação prática da plataforma **EMEN2** forneceu dados para compor a análise comparativa de ferramentas no âmbito da RSL:
+
+1. **Capacidade de Adaptação (Extensibilidade):** **Alta.** O motor de dados do EMEN2 baseado em Berkeley DB e Python permite a criação e personalização de ontologias e novos tipos de dados sem necessidade de recompilação do sistema ou alteração do esquema de banco de dados tradicional.
+2. **Usabilidade e Interface Web (DX / UX):** **Média/Baixa.** A interface gráfica nativa apresentou limitações para edição direta de templates de exibição (*views*), exigindo *workarounds* via linha de comando/scripts Python para injeção de atributos no backend.
+3. **Adequação como CMDB de Redes:** **Viável com ressalvas.** O sistema atende aos requisitos de modelagem hierárquica e rastreabilidade de ativos, porém demanda um esforço considerável de configuração técnica inicial se comparado a soluções CMDB especializadas de mercado.
