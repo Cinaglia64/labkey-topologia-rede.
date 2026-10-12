@@ -187,16 +187,13 @@ O resultado identificou a imagem `emen2-lab:latest`, cujo ID começava com `316c
 Essa verificação confirma a presença da imagem construída no ambiente Docker.
 
 ### 6.6. Evidências experimentais
-
 Para documentar os procedimentos e os resultados observados, foram registradas capturas de tela dos comandos executados e das respectivas saídas.
 
-As evidências estão organizadas na pasta `imagens/` do repositório:
+As evidências encontram-se salvas na raiz da pasta do experimento no repositório:
 
-- `imagens/docker-containers.png`: estado dos contêineres Docker;
-- `imagens/docker-logs-emen2.png`: registros de execução do contêiner `emen2-test`;
-- `imagens/docker-images.png`: imagens Docker disponíveis no ambiente.
-
-Esses arquivos complementam a descrição dos procedimentos e permitem consultar os resultados obtidos durante a preparação do ambiente.
+| Estado dos Contêineres | Registros do Log (`docker logs`) | Imagens Disponíveis |
+| :---: | :---: | :---: |
+| ![Estado dos Contêineres](docker-containers.png) | ![Registros do Log](docker-logs-emen2.png) | ![Imagens Disponíveis](docker-images.png) |
 
 ### 6.7. Considerações sobre a reprodução do ambiente
 
