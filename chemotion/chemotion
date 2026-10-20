@@ -1,0 +1,10 @@
+Chemotion
+    * tem apenas dois tipos de usuário, Admin e Person;
+    * tem integração com jupyter notebook;
+    * a hierarquia é adm -> usuário, usuários podem estar em grupos;
+    * é possível compartilhar coleções com grupos, usuários, e atribuir Roles para eles, Read, Write, Share, ou Import Elements;
+    * a integração com Jupyter Notebook é feita por uma api python;
+    * a melhor forma de tentar integrar com experimento de redes foi usando a aba de research plan e references,
+        todas as outras precisavam de dados relacionados a química para que fosse possível ter um formulário válido para salvar;
+    * é possível adicionar análises, e dados dos resultados assim como anexos dentro da aba de research plan;
+    * tambmém é possível compartilhar uma collection com outros usuários, atribuir papéis a eles (apenas nominal), assim como atribuir permissões.
