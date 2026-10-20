@@ -2,8 +2,6 @@
 
 Esta pasta reúne a documentação, ficheiros de configuração e capturas de ecrã da adaptação do ELN **LabTrove** (v2.4) para o registro de experimentos e simulações de Redes de Computadores no âmbito do TCC.
 
----
-
 ##  Deployment e Provisionamento (Docker Compose)
 
 O ambiente da aplicação LabTrove foi containerizado e subido via Docker Compose, utilizando uma imagem personalizada conectada a uma instância de banco de dados MySQL 5.7:
@@ -39,14 +37,10 @@ services:
 
 volumes:
   db_data:
-
+```
 # Evidências e Adaptação do LabTrove - Testes de Rede
 
 Esta pasta reúne a documentação, ficheiros de configuração e capturas de ecrã da adaptação do ELN **LabTrove** (v2.4) para o registro de experimentos e simulações de Redes de Computadores no âmbito do TCC.
-
----
-
----
 
 ##  Características e Limitações da Plataforma
 
