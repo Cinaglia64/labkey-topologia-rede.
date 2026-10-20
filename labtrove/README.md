@@ -90,14 +90,14 @@ Esta pasta reúne a documentação, ficheiros de configuração e capturas de ec
 ![Notebook com Primeira Entrada](notebook_preenchido.png)
 *Figura 8: Visualização do notebook exibindo a seção de Metodologia cadastrada.*
 
-![Notebook com Experimento Completo](notebook_experimento_preenchido_completo.jpg)
-*Figura 9: Caderno com todas as entradas preenchidas (Resultados, Cenários de Teste e Metodologia).*
+![Notebook com Experimento Completo](notebook_experimento_preenchido_completo.png)
+*Figura 9: Caderno de laboratório com os registros do experimento organizados nas seções de Metodologia, Cenários de Teste e Resultados.*
 
 ![Dashboard com Dados](dashboard_com_dados.png)
 *Figura 10: Painel principal listando as postagens recentes do experimento.*
 
-![Entrada com Comentários](notebook_entrada_comentario.jpg)
-*Figura 11: Seção de comentários em uma postagem, demonstrando o recurso de colaboração.*
+![Entrada com Comentários](notebook_entrada_comentario.png)
+*Figura 11: Seção de comentários de uma postagem, evidenciando o recurso de colaboração entre os participantes do experimento.*
 
 ![Linha do Tempo das Entradas](timeline_entradas.png)
 *Figura 12: Visualização em linha do tempo (Timeline) organizando cronologicamente as postagens do experimento.*
