@@ -83,8 +83,9 @@ Esta pasta reúne a documentação, ficheiros de configuração e capturas de ec
 ![Login com Notebook Cadastrado](login_com_notebook_cadastrado.png)
 *Figura 6: Lista de notebooks ativos exibida na interface principal.*
 
-![Adicionando Entrada no Notebook](adicionando_entrada_notebook.jpg)
+![Adicionando Entrada no Notebook](adicionando_entrada_notebook.png)
 *Figura 7: Editor de postagem utilizado para registrar detalhes da metodologia, os parâmetros do ambiente experimental (Mininet e OpenDaylight) e a topologia da rede.*
+
 
 ![Notebook com Primeira Entrada](notebook_preenchido.png)
 *Figura 8: Visualização do notebook exibindo a seção de Metodologia cadastrada.*
