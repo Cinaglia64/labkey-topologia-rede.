@@ -90,6 +90,11 @@ Esta pasta reúne a documentação, ficheiros de configuração e capturas de ec
 ![Notebook com Primeira Entrada](notebook_preenchido.png)
 *Figura 8: Visualização do notebook exibindo a seção de Metodologia cadastrada.*
 
+<img src="notebook_experimento_preenchido_completo.png"
+     alt="Notebook com Experimento Completo"
+     width="100%">
+
+<p align="center"><em>Figura 9: Caderno de laboratório com os registros do experimento organizados nas seções de Metodologia, Cenários de Teste e Resultados.</em></p>
 ![Notebook com Experimento Completo](notebook_experimento_preenchido_completo.png)
 *Figura 9: Caderno de laboratório com os registros do experimento organizados nas seções de Metodologia, Cenários de Teste e Resultados.*
 
