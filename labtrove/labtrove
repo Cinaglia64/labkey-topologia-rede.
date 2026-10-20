@@ -1,0 +1,6 @@
+Labtrove
+    * tem varios tipos de login, parecido com oauth, n foi possivel testar dado erros apresentados pela ferramenta, é possível usar plugins existentes no config.php alterando o mesmo, para mudar a forma de login para username/password por exemplo;
+    * n tem integração com jupyter notebook;
+    * a hierarquia é adm -> usuário, usuários podem criar seus notebooks e alterar a visibilidade deles baseado em publico, apenas usuarios logados, privados, ou por zona, um valor definido na ferramenta;
+    * é muito fácil utilizar para experimentos voltados a laboratorios de rede, pois funciona como um blog, logo é extremamente configurável as entradas, e os usuários podem comentar, contribuindo com novos resultados ou ate mesmo publicando em seus proprios blogs e referenciando o blog original;
+    * é possivel exportar um notebook e fazer seu download.
