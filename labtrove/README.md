@@ -56,52 +56,33 @@ Esta pasta reúne a documentação, ficheiros de configuração e capturas de ec
 - **Limitação:** Não possui integração nativa com Jupyter Notebook.
 
 ---
-## 📸 Evidências do Ambiente e Funcionalidades
-
-### 1. Autenticação e Gestão Administrativa
-![Figura 1](login.png)
-*Figura 1: Tela inicial e formulário de autenticação do LabTrove.*
-
-![Figura 2](admin.png)
-*Figura 2: Painel administrativo listando usuários cadastrados, configurações do ambiente PHP/MySQL e plugins ativos.*
-
-### 2. Criação, Configuração e Estrutura do Notebook
-![Figura 3](nome_real_figura3.png)
-*Figura 3: Formulário de criação do notebook para o experimento de garantia de atraso VoIP em SDN.*
-
-![Figura 4](nome_real_figura4.png)
-*Figura 4: Opções de configuração de visibilidade e níveis de acesso (Public, Logged In, Private).*
-
-![Figura 5](nome_real_figura5.png)
-*Figura 5: Interface do notebook recém-criado antes da inclusão de postagens.*
-
 ### 3. Registro do Experimento, Postagens e Colaboração
-![Figura 6](nome_real_figura6.png)
+![Figura 6](NOME_REAL_DA_SUA_IMAGEM_6.png)
 *Figura 6: Lista de notebooks ativos exibida na interface principal.*
 
-![Figura 7](nome_real_figura7.png)
+![Figura 7](NOME_REAL_DA_SUA_IMAGEM_7.png)
 *Figura 7: Editor de postagem adicionando detalhes sobre a metodologia, parâmetros da máquina (Mininet, OpenDaylight) e topologia.*
 
-![Figura 8](nome_real_figura8.png)
+![Figura 8](NOME_REAL_DA_SUA_IMAGEM_8.png)
 *Figura 8: Visualização do notebook exibindo a seção de Metodologia cadastrada.*
 
-![Figura 9](nome_real_figura9.png)
+![Figura 9](NOME_REAL_DA_SUA_IMAGEM_9.png)
 *Figura 9: Caderno com todas as entradas preenchidas (Resultados, Cenários de Teste e Metodologia).*
 
-![Figura 10](nome_real_figura10.png)
+![Figura 10](NOME_REAL_DA_SUA_IMAGEM_10.png)
 *Figura 10: Painel principal listando as postagens recentes do experimento.*
 
-![Figura 11](nome_real_figura11.png)
+![Figura 11](NOME_REAL_DA_SUA_IMAGEM_11.png)
 *Figura 11: Seção de comentários em uma postagem, demonstrando o recurso de colaboração.*
 
-![Figura 12](nome_real_figura12.png)
+![Figura 12](NOME_REAL_DA_SUA_IMAGEM_12.png)
 *Figura 12: Visualização em linha do tempo (Timeline) organizando cronologicamente as postagens do experimento.*
 
 ### 4. Exportação e Download dos Dados
-![Figura 13](nome_real_figura13.png)
+![Figura 13](NOME_REAL_DA_SUA_IMAGEM_13.png)
 *Figura 13: Interface de exportação de entradas do notebook com opções de vínculo.*
 
-![Figura 14](nome_real_figura14.png)
+![Figura 14](NOME_REAL_DA_SUA_IMAGEM_14.png)
 *Figura 14: Confirmação do processamento de exportação e link de download do arquivo comprimido (voip_atraso.zip).*
 ## Resumo do Experimento Registrado
 
