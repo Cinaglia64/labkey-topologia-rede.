@@ -94,9 +94,11 @@ Esta pasta reúne a documentação, ficheiros de configuração e capturas de ec
      alt="Notebook com Experimento Completo"
      width="100%">
 
+<p align="center">
+  <img src="notebook_experimento_preenchido_completo.png" alt="Notebook com Experimento Completo" width="100%">
+</p>
+
 <p align="center"><em>Figura 9: Caderno de laboratório com os registros do experimento organizados nas seções de Metodologia, Cenários de Teste e Resultados.</em></p>
-![Notebook com Experimento Completo](notebook_experimento_preenchido_completo.png)
-*Figura 9: Caderno de laboratório com os registros do experimento organizados nas seções de Metodologia, Cenários de Teste e Resultados.*
 
 ![Dashboard com Dados](dashboard_com_dados.png)
 *Figura 10: Painel principal listando as postagens recentes do experimento.*
