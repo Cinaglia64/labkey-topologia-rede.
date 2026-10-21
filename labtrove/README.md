@@ -1,10 +1,10 @@
-# Evidências e Adaptação do LabTrove - Testes de Rede
+# Evidências e Adaptação do LabTrove — Testes de Rede
 
-Esta pasta reúne a documentação, ficheiros de configuração e capturas de ecrã da adaptação do ELN **LabTrove** (v2.4) para o registro de experimentos e simulações de Redes de Computadores no âmbito do TCC.
+Esta pasta reúne a documentação, os arquivos de configuração e as capturas de tela da adaptação do ELN **LabTrove (v2.4)** para o registro e a documentação de experimentos de Redes de Computadores, no contexto do Trabalho de Conclusão de Curso (TCC).
 
-##  Deployment e Provisionamento (Docker Compose)
+## 1. Implantação e Provisionamento com Docker Compose
 
-O ambiente da aplicação LabTrove foi containerizado e subido via Docker Compose, utilizando uma imagem personalizada conectada a uma instância de banco de dados MySQL 5.7:
+O ambiente do LabTrove foi implantado em contêineres Docker, utilizando uma imagem da aplicação conectada a uma instância do banco de dados MySQL 5.7. A configuração utilizada está representada no arquivo Docker Compose a seguir.
 
 ```yaml
 version: '3.8'
@@ -38,96 +38,107 @@ services:
 volumes:
   db_data:
 ```
-# Evidências e Adaptação do LabTrove - Testes de Rede
 
-Esta pasta reúne a documentação, ficheiros de configuração e capturas de ecrã da adaptação do ELN **LabTrove** (v2.4) para o registro de experimentos e simulações de Redes de Computadores no âmbito do TCC.
+## 2. Características e Limitações da Plataforma
 
-##  Características e Limitações da Plataforma
+- **Estrutura baseada em blog:** organiza os registros em entradas cronológicas associadas a cadernos de laboratório (*notebooks*), permitindo documentar as etapas dos experimentos.
+- **Autenticação:** oferece suporte a mecanismos de autenticação configuráveis por meio do arquivo `config.php`, conforme os plugins disponíveis na instalação.
+- **Gestão de visibilidade:** permite configurar níveis de visibilidade dos notebooks, incluindo acesso público, para usuários autenticados, privado ou por zona, conforme as opções disponibilizadas pela plataforma.
+- **Colaboração:** permite adicionar comentários às postagens e consultar os registros em uma linha do tempo (*Timeline*).
+- **Exportação:** oferece recursos para exportar notebooks e baixar os dados gerados em arquivos compactados, conforme demonstrado nas evidências.
+- **Limitação de integração:** não foi identificada integração nativa com o Jupyter Notebook durante os testes realizados.
 
-* **Estrutura Baseada em Blog:** Funciona com uma dinâmica de entradas cronológicas e cadernos de anotações (*notebooks*). Por não impor campos rígidos da área de química ou biologia, adapta-se com facilidade a experimentos e laboratórios de redes.
-* **Mecanismos de Autenticação:** Oferece suporte a múltiplos plugins de login no arquivo `config.php` (como autenticação local por usuário/senha ou OAuth).
-* **Gestão e Visibilidade:** A hierarquia permite definir o nível de visibilidade de cada *notebook* (Público, Apenas Usuários Logados, Privado ou Acesso por Zona).
-* **Colaboração e Linha do Tempo:** Suporta comentários em postagens e disponibiliza visualização em linha do tempo (*Timeline*) dos registros do experimento.
-* **Exportação:** Possibilita a exportação integral de *notebooks* e o download dos dados em arquivo comprimido (`.zip`).
-* **Limitação:** Não possui integração nativa com Jupyter Notebook.
+## 3. Evidências do Ambiente e Funcionalidades
 
----
-
-##  Evidências do Ambiente e Funcionalidades
-
-### 1. Autenticação e Gestão Administrativa
+### 3.1. Autenticação e Gestão Administrativa
 
 ![Tela de Login](login.png)
-*Figura 1: Tela inicial e formulário de autenticação do LabTrove.*
+
+*Figura 1 — Tela inicial e formulário de autenticação do LabTrove.*
 
 ![Painel de Administração](admin.png)
-*Figura 2: Painel administrativo listando usuários cadastrados, configurações do ambiente PHP/MySQL e plugins ativos.*
+
+*Figura 2 — Painel administrativo com informações sobre os usuários cadastrados e as configurações disponíveis no ambiente.*
 
 ---
 
-### 2. Criação, Configuração e Estrutura do Notebook
+### 3.2. Criação, Configuração e Estrutura do Notebook
 
 ![Criação de Novo Notebook](criando_notebook.png)
-*Figura 3: Formulário de criação do notebook para o experimento de garantia de atraso VoIP em SDN.*
+
+*Figura 3 — Formulário de criação de um notebook destinado ao registro do experimento sobre garantia de atraso máximo para conexões VoIP em uma rede SDN.*
 
 ![Configurações e Segurança do Notebook](config_notebook.png)
-*Figura 4: Opções de configuração de visibilidade e níveis de acesso (Public, Logged In, Private).*
+
+*Figura 4 — Opções de configuração de visibilidade e níveis de acesso ao notebook.*
 
 ![Visualização do Notebook Vazio](notebook_vazio.png)
-*Figura 5: Interface do notebook recém-criado antes da inclusão de postagens.*
+
+*Figura 5 — Interface do notebook recém-criado, antes da inclusão de registros experimentais.*
 
 ---
 
-### 3. Registro do Experimento, Postagens e Colaboração
+### 3.3. Registro do Experimento, Postagens e Colaboração
 
 ![Login com Notebook Cadastrado](login_com_notebook_cadastrado.png)
-*Figura 6: Lista de notebooks ativos exibida na interface principal.*
+
+*Figura 6 — Interface principal exibindo o notebook cadastrado para o experimento.*
 
 ![Adicionando Entrada no Notebook](adicionando_entrada_notebook.png)
-*Figura 7: Editor de postagem utilizado para registrar detalhes da metodologia, os parâmetros do ambiente experimental (Mininet e OpenDaylight) e a topologia da rede.*
 
+*Figura 7 — Editor de postagem utilizado para registrar informações sobre a metodologia, os parâmetros do ambiente experimental e a topologia de rede.*
 
 ![Notebook com Primeira Entrada](notebook_preenchido.png)
-*Figura 8: Visualização do notebook exibindo a seção de Metodologia cadastrada.*
 
-<div align="center">
-  <img src="notebook_experimento_preenchido_completo.png" alt="Notebook com Experimento Completo" width="1200" />
-</div>
+*Figura 8 — Visualização do notebook com a primeira entrada referente à metodologia do experimento.*
 
-<div align="center">
-  <em>Figura 9: Caderno de laboratório com os registros do experimento organizados nas seções de Metodologia, Cenários de Teste e Resultados.</em>
-</div>
+<img src="notebook_experimento_preenchido_completo.png" alt="Notebook com experimento completo" width="100%" />
+
+<p align="center"><em>Figura 9 — Caderno de laboratório com os registros do experimento organizados nas seções de Metodologia, Cenários de Teste e Resultados.</em></p>
 
 ![Dashboard com Dados](dashboard_com_dados.png)
-*Figura 10: Painel principal listando as postagens recentes do experimento.*
+
+*Figura 10 — Painel principal com as postagens recentes relacionadas ao experimento.*
 
 ![Entrada com Comentários](notebook_entrada_comentario.png)
-*Figura 11: Seção de comentários de uma postagem, evidenciando o recurso de colaboração entre os participantes do experimento.*
+
+*Figura 11 — Seção de comentários de uma postagem, demonstrando o recurso de colaboração entre participantes.*
 
 ![Linha do Tempo das Entradas](timeline_entradas.png)
-*Figura 12: Visualização em linha do tempo (Timeline) organizando cronologicamente as postagens do experimento.*
+
+*Figura 12 — Visualização em linha do tempo (*Timeline*), organizando cronologicamente as postagens do experimento.*
 
 ---
 
-### 4. Exportação e Download dos Dados
+### 3.4. Exportação e Download dos Dados
 
 ![Exportação do Notebook](exportar_dashboard.png)
-*Figura 13: Interface de exportação de entradas do notebook com opções de vínculo.*
+
+*Figura 13 — Interface de exportação das entradas do notebook, com as opções de exportação disponíveis.*
 
 ![Download do Arquivo Exportado](dashboard_exportado_download.png)
-*Figura 14: Confirmação do processamento de exportação e link de download do arquivo comprimido (`voip_atraso.zip`).*
+
+*Figura 14 — Interface de confirmação da exportação e disponibilização do arquivo compactado para download.*
 
 ---
 
-## Resumo do Experimento Registrado
+## 4. Resumo do Experimento Registrado
 
-* **Experimento:** Modelo para garantir o atraso máximo para conexões VoIP em uma rede SDN ODL
-* **Ferramentas de Emulação:** Mininet, OpenDaylight (ODL), D-ITG
-* **Entradas Registradas:**
-  * **Metodologia:** Regressão linear simples e múltipla com parâmetros de taxa de dados, buffer e quantidade de hosts.
-  * **Cenários de Teste:** Definição das filas de prioridade e tráfego VoIP.
-  * **Resultados:** Medições efetuadas no ambiente emulado.
-* **Status:** Validação concluída e dados exportados.
+- **Experimento:** modelo para garantir o atraso máximo de conexões VoIP em uma rede SDN com OpenDaylight (ODL).
+- **Ferramentas de emulação e experimentação:** Mininet, OpenDaylight (ODL) e D-ITG.
+- **Registros documentados:**
+  - **Metodologia:** descrição do procedimento experimental e dos parâmetros considerados, incluindo taxa de dados, tamanho do buffer e quantidade de hosts.
+  - **Cenários de teste:** documentação dos cenários de tráfego VoIP e das configurações de filas de prioridade.
+  - **Resultados:** registro das medições obtidas no ambiente emulado.
+- **Documentação e exportação:** registros organizados no notebook e exportação dos dados conforme demonstrado nas evidências.
+
+## 5. Considerações Finais
+
+Os testes demonstraram que o LabTrove pode ser utilizado para organizar e documentar informações de experimentos de Redes de Computadores por meio de notebooks, postagens cronológicas, comentários e recursos de exportação.
+
+A adaptação aproveita a estrutura flexível de registros da plataforma para documentar metodologia, cenários de teste e resultados experimentais. Entretanto, a documentação desses elementos não implica execução automática das simulações pela ferramenta. Também não foi identificada integração nativa com o Jupyter Notebook durante os testes.
+
+As evidências apresentadas registram as funcionalidades exploradas e a organização dos dados do experimento no ambiente LabTrove.
 
 
 
